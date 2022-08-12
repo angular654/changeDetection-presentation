@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit, Output } from '@angular/core';
-let index = 0;
 interface IConfig {
   position: string
 }
@@ -48,12 +47,10 @@ export class ParentComponent implements OnInit {
     */
   }
   get runChangeDetection() {
-    console.log(`Проверка изменений parent ${this._index}`);
+    console.log(`Проверка изменений parent`);
     return true;
   }
-  constructor() {
-    this._index = index++;
-   }
+  constructor() {}
   ngOnInit(): void {
   }
 
