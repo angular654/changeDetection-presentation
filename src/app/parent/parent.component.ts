@@ -42,7 +42,7 @@ export class ParentComponent implements OnInit {
     this.config.position ='bottom';
     (ссылка не изменилась)
 
-    В ChildComponent данны не поменяются при условии того,
+    В ChildComponent данные не поменяются при условии,
     что там установлена onPush детекция изменений
     */
   }

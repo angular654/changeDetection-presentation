@@ -1,0 +1,6 @@
+<ng-container *ngIf="time$ | async as time; else loading">
+    <app-async-presenter [time]="time"></app-async-presenter>
+  </ng-container>
+  <ng-template #loading>
+    loading...
+</ng-template>
