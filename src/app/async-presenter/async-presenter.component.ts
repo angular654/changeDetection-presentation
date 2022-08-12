@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-
+let index = 0;
 @Component({
   selector: 'app-async-presenter',
   templateUrl: './async-presenter.component.html',
@@ -8,9 +8,13 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
   
 })
 export class AsyncPresenterComponent implements OnInit {
+  private _index = 1;
   @Input()
   time!: Date;
   
+  constructor() {
+    this._index = index++
+  }
   ngOnInit() {
     
   }
@@ -19,7 +23,7 @@ export class AsyncPresenterComponent implements OnInit {
   }
 
   get runChangeDetection() {
-    console.warn('Проверка изменений async-presenter');
+    console.warn(`Проверка изменений async-presenter ${this._index}`);
     return true;
   }
 }
