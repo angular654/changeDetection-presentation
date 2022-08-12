@@ -13,7 +13,7 @@ export class AsyncPresenterComponent implements OnInit {
   time!: Date;
   
   constructor() {
-    this._index = index++
+    this._index = index++;
   }
   ngOnInit() {
     
